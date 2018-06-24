@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link href="css/main.css" rel="stylesheet">
+	<script src="js/functions.js"> </script>
+
+</head>
+
+
+
+<body>
+	<section id="row"> 
+		<div id="information">
+			<div id="description">
+				<h1>OnClick Calculator</h1>
+				<p>As the title suggests, this calculator enables users to calculate different (and multiple) mathematical operations by 
+					clicking on the buttons.
+				</p>
+				<hr>
+				<div class="instructions">
+					Notable buttons:<br />
+						<ul>
+							<li>Scientific layout (Sci): <span style="color:#333333;">Shows this layout.</span></li>
+							<li>Standard layout (Sta): <span style="color:#333333;">Shows this layout.</span></li>
+						</ul>
+					<hr>
+					<span style="color: #aa8214;">Note: </span><span style="font-weight: normal; color: #aa8214;">It's not built for multiple platforms.</span>
+					</p>	
+				</div>
+			</div>
+		</div>
+
+		<form id="form" name="Form">
+			<table>
+				<tr>
+					<td colspan="5"><input class="textbox" type="text"  id="textbox" name="textbox" disabled></td>
+				</tr>
+
+				<tr>
+					<td><input type="button" class="layoutbutton" id="buttonSci" value="Sci" onclick="Scientific()"></td> 
+					<td><input type="button" class="layoutbutton" id="buttonSta" value="Sta" onclick="Standard()"></td>				
+					<td><input type="button" class="specialbutton" id="buttonC" value="C" onclick="C()"></td>
+					<td><input type="button" class="specialbutton" id="buttonDel" value="&#9003;" onclick="Back()"></td>
+					<td><input type="button" class="equal" id="buttonEqual" value="=" onclick="Evaluate()"></td>
+				</tr>
+				<tr>
+					<td><input type="button" class="button" id="button1" value="1" onclick="Calculate(1)"></td>
+					<td><input type="button" class="button" id="button2" value="2" onclick="Calculate(2)"></td>
+					<td><input type="button" class="button" id="button3" value="3" onclick="Calculate(3)"></td>		
+					<td><input type="button" class="button" id="button4" value="4" onclick="Calculate(4)"></td>
+					<td><input type="button" class="specialbutton" id="buttonPlus" name="add" value="+" onclick="Calculate('+')"></td>
+				</tr>
+				<tr>		
+					<td><input type="button" class="button" id="button5" value="5" onclick="Calculate(5)"></td>
+					<td><input type="button" class="button" id="button6" value="6" onclick="Calculate(6)"></td>
+					<td><input type="button" class="button" id="button7" value="7" onclick="Calculate(7)"></td>
+					<td><input type="button" class="button" id="button8" value="8" onclick="Calculate(8)"></td>		
+					<td><input type="button" class="specialbutton" id="buttonMinus" value="-" onclick="Calculate('-')"></td>		
+				</tr>
+				<tr>
+
+					<td><input type="button" class="button" id="button9" value="9" onclick="Calculate(9)"></td>
+					<td><input type="button" class="button" id="button0" value="0" onclick="Calculate(0)"></td>
+					<td><input type="button" class="specialbutton" id="buttonDot" value="." onclick="Calculate('.')"></td>
+					<td><input type="button" class="specialbutton" id="buttonDivision" value="/" onclick="Calculate('/')"></td>
+					<td><input type="button" class="specialbutton" id="buttonMultiplication" value="*" onclick="Calculate('*')"></td>
+				</tr>
+
+				<tr id="sc"> <!-- this is the scientific layout -->
+					<td><input type="button" class="specialbutton" id="buttonSin" value="sin" onclick="Sine()"></td>
+					<td><input type="button" class="specialbutton" id="buttonCos" value="cos" onclick="Cosinus()"></td>
+					<td><input type="button" class="specialbutton" id="buttonTan" value="tan" onclick="Tangent()"></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+	<section id="copyright">
+		&copy
+		<script>
+			var dteNow = new Date();
+			var intYear = dteNow.getFullYear();
+			document.write(intYear);
+		</script> - Tibor Gazsovics<br />
+
+		<a href="https://github.com/Tibzie">Follow me on Github</a><br />
+		<a href="www.tiborgazsovics.com">My online portfolio</a>
+	</section>
+
+</body>
+
+
+
+</html>
+<!-- 
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<link href="css/main.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="js/functions.js"></script>
+	</head>
+
+
+	<body>
+	<form name="F">
+		<table>
+			<tr>
+				<td colspan="4"><input class="textbox" type="text" name="textbox"></td>
+			</tr>
+			<tr>
+				<td><input class="button" type="button" value="C" name="" ></td>
+				<td><input class="button" type="button" value="<" name=""></td>
+				<td></td>
+				<td><input class="button" type="button" value="-" name="" ></td>
+			</tr>
+
+
+			<tr>
+				<td><input class="button" type="button" value="7" name="seven" ></td>
+				<td><input class="button" type="button" value="8" name="eight"></td>
+				<td><input class="button" type="button" value="9" name="nine"></td>
+				<td><input class="button" type="button" value="+" name="add" ></td>
+			</tr>
+
+			<tr>
+				<td><input class="button" type="button" value="4" name="four" ></td>
+				<td><input class="button" type="button" value="5" name="five" ></td>	
+				<td><input class="button" type="button" value="6" name="six"></td>
+				<td><input class="button" type="button" value="*" name="" ></td>		
+			</tr>
+
+			<tr>
+				<td><input class="button" type="button" value="1" name="one" ></td>
+				<td><input class="button" type="button" value="2" name="two" ></td>	
+				<td><input class="button" type="button" value="3" name="three" ></td>
+				<td><input class="button" type="button" value="/" name="" ></td>
+					
+			</tr>
+			<tr>
+				<td></td>
+				<td><input class="button" type="button" value="0" name="zero" ></td>
+				<td><input class="button" type="button" value="." name="dot" ></td>
+				<td><input class="equal" type="button" value="=" name="evaluate" ></td>
+
+			</tr>
+
+		</table>
+	</form>
+
+	</body>
+
+
+</html> -->
